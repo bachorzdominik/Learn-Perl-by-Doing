@@ -31,8 +31,8 @@ sub main {
     print(Dumper(@foods));
 
     print("\n");
-    print($foods[0]{dogs} . "\n");
-    print($foods[1]{john} . "\n");
+    print($foods[0]{'dogs'} . "\n");
+    print($foods[1]{'john'} . "\n");
     print("\n");
 
     # Demostarting two ways to iterate over the array of hashes
@@ -50,7 +50,7 @@ sub main {
     # %$var dereferences the hash
     # This loop uses the 'keys' function to get all the keys of each hash, 
     # and then accesses each value with the hash key
-    foreach my $var (@foods) {
+    foreach my $var(@foods) {
         foreach my $key (keys %$var) {
             my $value = $var->{$key};
             
